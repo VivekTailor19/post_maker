@@ -31,7 +31,7 @@ class _DigitalMarketingState extends State<DigitalMarketing> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                Container(height: 90,width: 90,
+                Container(height: 150,width: 150,
                 decoration: BoxDecoration(
                     color: Colors.teal,
                     image: DecorationImage(image: AssetImage("assets/images/addperson.png"),fit: BoxFit.cover),
