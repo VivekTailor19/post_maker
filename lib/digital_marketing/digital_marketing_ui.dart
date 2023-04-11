@@ -123,17 +123,20 @@ class _Digital_Marketing_PostState extends State<Digital_Marketing_Post> {
                   ),
                 ),
 
-                Align(alignment: Alignment(0.9,-0.2),
+                Align(alignment: Alignment(0.9,-0.27),
                     child: Text("Digital",style: TextStyle(color: Colors.white,fontSize: 25),)),
-                Align(alignment: Alignment(0.9,-0.15),
+                Align(alignment: Alignment(0.9,-0.19),
                     child: Text("MARKETING",style: TextStyle(color: Colors.white,fontSize: 20),)),
 
-                Align(alignment: Alignment(0.9,-0.1),
+                Align(alignment: Alignment(0.9,-0.12),
                     child: Text("AGENCY",style: TextStyle(color: Colors.white,fontSize: 20),)),
                 Align(alignment: Alignment(0.9,0.1),
-                  child: Text("${dm.shortdetail}",style: TextStyle(color: Colors.white,fontSize: 10),textAlign: TextAlign.right,),),
+                  child: Text("Short Details hello world indeia workd lkjsdjfk",style: TextStyle(color: Colors.white,fontSize: 10),textAlign: TextAlign.right,),),
                 Align(alignment: Alignment(0.9,0.2),
                   child: Text("${dm.tagline}",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.left,),),
+
+                // Align(alignment: Alignment(0.9,0.1),
+                //   child: Text("${dm.tagline}",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.left,),),
 
                 // Align(alignment: Alignment(0.5,0.5),
                 //   child: Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -149,6 +152,7 @@ class _Digital_Marketing_PostState extends State<Digital_Marketing_Post> {
                 //     ],),
                 //   ),
                 // )
+
 
         ]),
             ),)
