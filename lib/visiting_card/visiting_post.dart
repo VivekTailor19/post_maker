@@ -55,16 +55,17 @@ class _Visiting_CardState extends State<Visiting_Card> {
                 height: 250,
                 width: 360,
                 decoration: BoxDecoration(
-                    //color: Colors.white,
-                  image: DecorationImage(image: FileImage(File("${data.bgimg}")),fit: BoxFit.fill)
+                    color: Colors.white,
+                 // image: DecorationImage(image: FileImage(File("${data.bgimg}")),fit: BoxFit.cover)
                 ),
 
               ),
                 Positioned(
-                  top: 45,
-                  left: 15,
-                  child: Transform.rotate(angle: pi/4,
-                    child: Container(height: 160,width: 160,
+                  top: 23,
+                  left: 6,
+                  child: Transform.rotate(angle: 0,
+                    child: Container(height: 200,width: 182,
+
                       decoration: BoxDecoration(
                           color: Colors.pink,
                           image: DecorationImage(image: FileImage(File("${data.img}")),fit: BoxFit.fill,),
@@ -72,17 +73,33 @@ class _Visiting_CardState extends State<Visiting_Card> {
                   ),
                 ),
                 Container(
-                height: 250,
-                width: 360,
-                decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage("assets/images/visiting.png"),fit: BoxFit.fill)
-                ),
+                  height: 250,
+                  width: 360,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage("assets/images/visiting.png"),fit: BoxFit.fill)
+                  ),
 
-              ),
+                ),
+                
+                Positioned(top: 26,left: 123,
+                child: Transform.rotate(angle: pi/3.8,child: Container(color: Colors.white,height: 37.5,width: 93,))),
+                Positioned(left: 175,top: 23,
+                    child: Container(height: 20,width: 20,color: Colors.white,)),
+
+                Positioned(top: 148,left: 154,
+                    child: Transform.rotate(angle: pi/4.2,child: Container(color: Colors.white,
+                      height: 95,width: 20,))),
+                Positioned(top: 180,left: 157,
+                    child: Transform.rotate(angle: pi/4.2,child: Container(color: Colors.white,
+                      height: 53,width: 30,))),
+
+
+
+
                 Positioned(top: 20,right:5,child: Container(width: 220,alignment:Alignment.center,child: Text("${data.name}",style: TextStyle(fontSize:25 ),))),
                 Positioned(top: 50,right:5,child: Container(width: 220,alignment:Alignment.center,child: Text("${data.currentposition}",style: TextStyle(fontSize:15 ),))),
 
-                //Positioned(top: 60,right:20,child: Text("${data.currentposition}",style: TextStyle(fontSize: 26),)),
+                Positioned(top: 60,right:20,child: Text("${data.currentposition}",style: TextStyle(fontSize: 26),)),
                 Positioned(left:200,top: 150,child:Container(height:23,width:150,alignment:Alignment.centerLeft,child: Text(" ${data.currentcompany}",style: TextStyle(fontSize: 15),)),),
                 Positioned(left:200,top: 170,child: Container(height:23,width:150,alignment:Alignment.centerLeft,child: Text("🚩 ${data.address}",style: TextStyle(fontSize: 11.5),))),
                 Positioned(left:200,top: 183,child: Container(height:23,width:150,alignment:Alignment.centerLeft,child: Text("📱 ${data.contact}",style: TextStyle(fontSize: 11.5),))),
