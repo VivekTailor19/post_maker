@@ -3,26 +3,27 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:profile_ui/linkedin_screen/linkedin_modal.dart';
 
-class Linkedin_Info extends StatefulWidget {
-  const Linkedin_Info({Key? key}) : super(key: key);
+import 'card_modal.dart';
+
+
+class Visiting_Data extends StatefulWidget {
+  const Visiting_Data({Key? key}) : super(key: key);
 
   @override
-  State<Linkedin_Info> createState() => _Linkedin_InfoState();
+  State<Visiting_Data> createState() => _Visiting_DataState();
 }
 
-class _Linkedin_InfoState extends State<Linkedin_Info> {
+class _Visiting_DataState extends State<Visiting_Data> {
 
   TextEditingController txtname = TextEditingController();
   TextEditingController txtcurrentposition = TextEditingController();
   TextEditingController txtcurrentcompany = TextEditingController();
   TextEditingController txtaddress = TextEditingController();
-  TextEditingController txteducation = TextEditingController();
-  TextEditingController txtconnection = TextEditingController();
-  TextEditingController txtfollower = TextEditingController();
-  TextEditingController txttagline = TextEditingController();
-  TextEditingController txtlifemoto = TextEditingController();
+  TextEditingController txtemail = TextEditingController();
+  TextEditingController txtcontact = TextEditingController();
+  TextEditingController txtwebsite = TextEditingController();
+
 
 
   String? photo;
@@ -37,13 +38,16 @@ class _Linkedin_InfoState extends State<Linkedin_Info> {
             toolbarHeight: 80,
             flexibleSpace: Container(
               decoration: BoxDecoration(gradient: RadialGradient(colors: [Colors.blue,Colors.indigo],radius: 10)),),
-            title: Text("Linkedin Post Designer",style: TextStyle(fontFamily: 'deli',fontSize: 35,color: Colors.white),)),
+            title: Text("Visiting Card Maker",style: TextStyle(fontFamily: 'deli',fontSize: 35,color: Colors.white),)),
         body: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 15),
           child: SingleChildScrollView(
             child: Column(
 
               children: [
+
+                Image.asset("assets/images/visiting_demo.jpg",height: 150,width: 200,fit: BoxFit.fill,),
+
                 Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
 
@@ -101,30 +105,33 @@ class _Linkedin_InfoState extends State<Linkedin_Info> {
 
                 Textediting(hint: "Enter Name .....",controller: txtname,kboard: TextInputType.text),
                 Textediting(hint: "Enter Address in short .....",controller: txtaddress,kboard: TextInputType.streetAddress),
-                Textediting(hint: "Enter Maximum Education Name .....",controller: txteducation,kboard: TextInputType.text),
                 Textediting(hint: "Enter Current Company Name .....",controller: txtcurrentcompany,kboard: TextInputType.text),
                 Textediting(hint: "Enter Current Position .....",controller: txtcurrentposition,kboard: TextInputType.text),
-                Textediting(hint: "Enter Life moto .....",controller: txtlifemoto,kboard: TextInputType.text),
-                Textediting(hint: "Enter Tagline .....",controller: txttagline,kboard: TextInputType.text),
-                Textediting(hint: "Enter Total Connections .....",controller: txtconnection,kboard: TextInputType.number),
-                Textediting(hint: "Enter Total Followers .....",controller: txtfollower,kboard: TextInputType.number),
+                Textediting(hint: "Enter Email Id .....",controller: txtemail,kboard: TextInputType.emailAddress),
+                Textediting(hint: "Enter Contact Number .....",controller: txtcontact,kboard: TextInputType.number),
+                Textediting(hint: "Enter Website .....",controller: txtwebsite,kboard: TextInputType.url),
+
 
 
                 ElevatedButton(onPressed: () {
 
-                  Linkedin data = Linkedin(
-                    name: txtname.text,
+
+                  VisitCard data = VisitCard(
+                      name: txtname.text,
                     address: txtaddress.text,
-                    follower: txtfollower.text,
-                    connection: txtconnection.text,
                     currentcompany: txtcurrentcompany.text,
                     currentposition: txtcurrentposition.text,
-                    education: txteducation.text,
-                    lifemoto: txtlifemoto.text,
-                    tagline: txttagline.text
+                    email: txtemail.text,
+                    contact: txtcontact.text,
+                    website: txtwebsite.text,
+                    img: photo,
+                    bgimg: bgphoto
                   );
 
-                  Navigator.pushNamed(context, "linkpost",arguments: data);
+                  setState(() {
+                    Navigator.pushNamed(context, "visiting",arguments: data);
+                  });
+
 
                 }, child: Text("Create",style: TextStyle(color: Colors.white,fontSize: 25),),style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),)
 

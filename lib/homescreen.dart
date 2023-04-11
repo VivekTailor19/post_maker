@@ -30,9 +30,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
               child: Item("Instagram Story")),
               GestureDetector(onTap: () {
-                Navigator.pushNamed(context, "linkedin");
+                Navigator.pushNamed(context, "visit");
                 },
-              child: Item("Linkedin")),
+              child: Item("Visiting Card")),
               GestureDetector(onTap: () {
                 Navigator.pushNamed(context, "congrats");
               },

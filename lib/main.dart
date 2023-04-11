@@ -74,13 +74,14 @@ import 'package:flutter/material.dart';
 
 import 'package:profile_ui/homescreen.dart';
 import 'package:profile_ui/insta_screen/insta_info.dart';
-import 'package:profile_ui/linkedin_screen/linkedin_info.dart';
-import 'package:profile_ui/linkedin_screen/linkedin_post.dart';
+
 import 'package:profile_ui/sample_screen/congratulation.dart';
 import 'package:profile_ui/sample_screen/sample_info.dart';
+import 'package:profile_ui/visiting_card/visiting_post.dart';
 
 import 'digital_marketing/digital_marketing_ui.dart';
 import 'digital_marketing/digitalmarketing_data.dart';
+import 'visiting_card/visiting_data.dart';
 
 
 
@@ -94,8 +95,8 @@ void main() {
         "insta":(context) => Insta_Info(),
 
 
-        "linkedin":(context) => Linkedin_Info(),
-        "linkpost":(context) => Linkedin_Post(),
+        "visit":(context) => Visiting_Data(),
+        "visiting":(context) => Visiting_Card(),
 
         "congrats":(context) => Congrats(),
         "sample":(context) => Sample_Info(),
