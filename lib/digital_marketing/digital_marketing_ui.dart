@@ -112,7 +112,10 @@ class _Digital_Marketing_PostState extends State<Digital_Marketing_Post> {
 
                 Align(alignment: Alignment(-0.6,0),
                   child: Container(height: 250,width: 150,
+                    alignment: Alignment.center,
                     decoration: BoxDecoration(color: Colors.white,
+                        image: DecorationImage(image: AssetImage(
+                            "assets/images/digitalmarketing.png"),fit: BoxFit.fill),
                         borderRadius: BorderRadius.vertical(top: Radius.circular(35),bottom: Radius.circular(35)),
                         boxShadow: [BoxShadow(color: Colors.black12,blurRadius: 5)]
                     ),
