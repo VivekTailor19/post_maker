@@ -21,7 +21,6 @@ class _Sample_InfoState extends State<Sample_Info> {
 
   GlobalKey _global = GlobalKey();
 
-
   @override
   Widget build(BuildContext context) {
 
