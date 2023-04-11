@@ -67,7 +67,7 @@ class _Visiting_CardState extends State<Visiting_Card> {
                     child: Container(height: 160,width: 160,
                       decoration: BoxDecoration(
                           color: Colors.pink,
-                          image: DecorationImage(image: FileImage(File("${data.img}")),fit: BoxFit.fill),
+                          image: DecorationImage(image: FileImage(File("${data.img}")),fit: BoxFit.fill,),
                           borderRadius: BorderRadius.circular(19)),),
                   ),
                 ),
