@@ -137,8 +137,10 @@ class _Digital_Marketing_PostState extends State<Digital_Marketing_Post> {
                   child: Container(
                       width: 130, child: Text("Tagline sdfsdf sdsdfsdfsfsfsfsfsd sfs sf sf sf s fs ",style: TextStyle(color: Colors.white,fontSize: 15),textAlign: TextAlign.right,)),),
 
-                Align(alignment: Alignment(),
-                  child: ElevatedButton(onPressed: () {}, child: Text("Join Now"),
+                Align(alignment: Alignment(0,0.5),
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(backgroundColor: Colors.amber),
+                      onPressed: () {}, child: Text("Join Now"),
                   //         style: ElevatedButton.styleFrom(backgroundColor: Colors.amber)
                   //       ),
 
@@ -161,8 +163,8 @@ class _Digital_Marketing_PostState extends State<Digital_Marketing_Post> {
                   // )
 
 
-        ,
-                )]),
+
+                ),),],),
             ),)
     ,
     )
