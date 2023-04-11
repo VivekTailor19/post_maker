@@ -130,10 +130,12 @@ class _Digital_Marketing_PostState extends State<Digital_Marketing_Post> {
 
                 Align(alignment: Alignment(0.9,-0.12),
                     child: Text("AGENCY",style: TextStyle(color: Colors.white,fontSize: 20),)),
-                Align(alignment: Alignment(0.9,0.1),
-                  child: Text("Short Details hello world indeia workd lkjsdjfk",style: TextStyle(color: Colors.white,fontSize: 10),textAlign: TextAlign.right,),),
-                Align(alignment: Alignment(0.9,0.2),
-                  child: Text("${dm.tagline}",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.left,),),
+                Align(alignment: Alignment(0.9,0.05),
+                  child: Container(width: 130,
+                      child: Text("Shortjsdfhlsidfdf=-sdfksdfkljsfd Details hello world indeia workd lkjsdjfk",style: TextStyle(color: Colors.white,fontSize: 10),textAlign: TextAlign.right,)),),
+                Align(alignment: Alignment(0.9,0.25),
+                  child: Container(
+                      width: 130, child: Text("Tagline sdfsdf sdsdfsdfsfsfsfsfsd sfs sf sf sf s fs ",style: TextStyle(color: Colors.white,fontSize: 15),textAlign: TextAlign.right,)),),
 
                 // Align(alignment: Alignment(0.9,0.1),
                 //   child: Text("${dm.tagline}",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.left,),),
