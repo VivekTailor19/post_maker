@@ -137,26 +137,32 @@ class _Digital_Marketing_PostState extends State<Digital_Marketing_Post> {
                   child: Container(
                       width: 130, child: Text("Tagline sdfsdf sdsdfsdfsfsfsfsfsd sfs sf sf sf s fs ",style: TextStyle(color: Colors.white,fontSize: 15),textAlign: TextAlign.right,)),),
 
-                // Align(alignment: Alignment(0.9,0.1),
-                //   child: Text("${dm.tagline}",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.left,),),
+                Align(alignment: Alignment(),
+                  child: ElevatedButton(onPressed: () {}, child: Text("Join Now"),
+                  //         style: ElevatedButton.styleFrom(backgroundColor: Colors.amber)
+                  //       ),
 
-                // Align(alignment: Alignment(0.5,0.5),
-                //   child: Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //     children: [
-                //       ListTile(leading: IconButton(icon: Icon(Icons.call),onPressed: () {},
-                //         color: Colors.white,
-                //       highlightColor: Colors.yellow),),
-                //       ElevatedButton(onPressed: () {}, child: Text("Join Now"),
-                //         style: ElevatedButton.styleFrom(backgroundColor: Colors.amber)
-                //       ),
-                //       ListTile(title: Text("Enter Website"),
-                //       trailing: Icon(Icons.language),)
-                //     ],),
-                //   ),
-                // )
+                  // Align(alignment: Alignment(0.9,0.1),
+                  //   child: Text("${dm.tagline}",style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.left,),),
+
+                  // Align(alignment: Alignment(0.5,0.5),
+                  //   child: Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  //     children: [
+                  //       ListTile(leading: IconButton(icon: Icon(Icons.call),onPressed: () {},
+                  //         color: Colors.white,
+                  //       highlightColor: Colors.yellow),),
+                  //       ElevatedButton(onPressed: () {}, child: Text("Join Now"),
+                  //         style: ElevatedButton.styleFrom(backgroundColor: Colors.amber)
+                  //       ),
+                  //       ListTile(title: Text("Enter Website"),
+                  //       trailing: Icon(Icons.language),)
+                  //     ],),
+                  //   ),
+                  // )
 
 
-        ]),
+        ,
+                )]),
             ),)
     ,
     )
