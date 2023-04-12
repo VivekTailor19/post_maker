@@ -37,18 +37,18 @@ class _DigitalMarketingState extends State<DigitalMarketing> {
               child: Column(
                 children: [
 
-                  photo == null ?
-
+                //   photo == null ?
+                //
+                // Container(height: 150,width: 150,
+                // decoration: BoxDecoration(
+                //     color: Colors.teal,
+                //     image: DecorationImage(image: AssetImage("assets/images/addperson.png"),fit: BoxFit.cover),
+                //     shape: BoxShape.circle,
+                //
+                // ),) :
                 Container(height: 150,width: 150,
                 decoration: BoxDecoration(
-                    color: Colors.teal,
-                    image: DecorationImage(image: AssetImage("assets/images/addperson.png"),fit: BoxFit.cover),
-                    shape: BoxShape.circle,
-
-                ),) :
-                Container(height: 150,width: 150,
-                decoration: BoxDecoration(
-                    color: Colors.teal,
+                    //color: Colors.teal,
                     image: DecorationImage(image: FileImage(File("$photo")),fit: BoxFit.cover),
                     shape: BoxShape.circle,
 
@@ -56,22 +56,22 @@ class _DigitalMarketingState extends State<DigitalMarketing> {
                 Row(
                   mainAxisAlignment:MainAxisAlignment.spaceEvenly,
                   children: [
-                  TextButton(style: TextButton.styleFrom(backgroundColor: Colors.amber),onPressed: () {
+                  TextButton(style: TextButton.styleFrom(backgroundColor: Colors.amber),onPressed: () async {
                     ImagePicker img = ImagePicker();
-                    XFile? xfile = img.pickImage(source: ImageSource.camera) as XFile?;
+                    XFile? xfile = await img.pickImage(source: ImageSource.camera) as XFile?;
                     setState(() {
                       photo = xfile!.path;
                     });
-                    photo = xfile!.path;
+
                   },
                       child: Text("Capture",style: TextStyle(fontSize: 25,color: Colors.pink),)),
-                  TextButton(style: TextButton.styleFrom(backgroundColor: Colors.amber),onPressed: () {
+                  TextButton(style: TextButton.styleFrom(backgroundColor: Colors.amber),onPressed: () async {
                     ImagePicker img = ImagePicker();
-                    XFile? xfile = img.pickImage(source: ImageSource.gallery) as XFile?;
+                    XFile? xfile = await img.pickImage(source: ImageSource.gallery);
                     setState(() {
                       photo = xfile!.path;
                     });
-                    photo = xfile!.path;
+
                   }, child: Text("Gallery",style: TextStyle(fontSize: 25,color: Colors.pink),)),
                 ],),
                 SizedBox(height: 10),

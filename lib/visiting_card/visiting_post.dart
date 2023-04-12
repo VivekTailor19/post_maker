@@ -97,9 +97,9 @@ class _Visiting_CardState extends State<Visiting_Card> {
 
 
                 Positioned(top: 20,right:5,child: Container(width: 220,alignment:Alignment.center,child: Text("${data.name}",style: TextStyle(fontSize:25 ),))),
-                Positioned(top: 50,right:5,child: Container(width: 220,alignment:Alignment.center,child: Text("${data.currentposition}",style: TextStyle(fontSize:15 ),))),
+                Positioned(top: 50,right:5,child: Container(width: 220,alignment:Alignment.center,child: Text("${data.currentposition}",style: TextStyle(fontSize:18 ),))),
 
-                Positioned(top: 60,right:20,child: Text("${data.currentposition}",style: TextStyle(fontSize: 26),)),
+
                 Positioned(left:200,top: 150,child:Container(height:23,width:150,alignment:Alignment.centerLeft,child: Text(" ${data.currentcompany}",style: TextStyle(fontSize: 15),)),),
                 Positioned(left:200,top: 170,child: Container(height:23,width:150,alignment:Alignment.centerLeft,child: Text("🚩 ${data.address}",style: TextStyle(fontSize: 11.5),))),
                 Positioned(left:200,top: 183,child: Container(height:23,width:150,alignment:Alignment.centerLeft,child: Text("📱 ${data.contact}",style: TextStyle(fontSize: 11.5),))),
