@@ -132,15 +132,44 @@ class _Digital_Marketing_PostState extends State<Digital_Marketing_Post> {
                     child: Text("AGENCY",style: TextStyle(color: Colors.white,fontSize: 20),)),
                 Align(alignment: Alignment(0.9,0.05),
                   child: Container(width: 130,
-                      child: Text("Shortjsdfhlsidfdf=-sdfksdfkljsfd Details hello world indeia workd lkjsdjfk",style: TextStyle(color: Colors.white,fontSize: 10),textAlign: TextAlign.right,)),),
+                      child: Text("${dm.shortdetail}",style: TextStyle(color: Colors.white,fontSize: 10),textAlign: TextAlign.right,)),),
                 Align(alignment: Alignment(0.9,0.25),
                   child: Container(
-                      width: 130, child: Text("Tagline sdfsdf sdsdfsdfsfsfsfsfsd sfs sf sf sf s fs ",style: TextStyle(color: Colors.white,fontSize: 15),textAlign: TextAlign.right,)),),
+                      width: 130, child: Text("${dm.tagline}",style: TextStyle(color: Colors.white,fontSize: 15),textAlign: TextAlign.right,)),),
 
                 Align(alignment: Alignment(0,0.5),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(backgroundColor: Colors.amber),
-                      onPressed: () {}, child: Text("Join Now"),
+                      onPressed: () {}, child: Text("Join Now"),),),
+
+                Positioned(bottom:160,left: 15,
+                  child: Row(children: [
+                    Container(height: 30,width: 25,alignment: Alignment.center,color: Colors.amber,
+                      child: Icon(Icons.call,size: 22,color: Colors.white,),),
+                    SizedBox(width: 5),
+                    Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                      Text("For more information",style: TextStyle(color: Colors.black45,fontSize: 8),),
+                      Text("${dm.phone}",style: TextStyle(color: Colors.black,fontSize: 10),),
+                    ],)
+                  ],),
+                ),
+                Positioned(bottom:160,right: 15,
+                  child: Row(children: [
+
+                    Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text("${dm.website}",style: TextStyle(color: Colors.black45,fontSize: 10),),
+                        Text("VISIT OUR WEBSITE",style: TextStyle(color: Colors.black,fontSize: 9,fontWeight: FontWeight.bold),),
+                      ],),
+                    SizedBox(width: 4),
+                    Icon(Icons.language_rounded,color: Colors.amber,size: 30,)
+                  ],),
+                ),
+
+
                   //         style: ElevatedButton.styleFrom(backgroundColor: Colors.amber)
                   //       ),
 
@@ -164,7 +193,7 @@ class _Digital_Marketing_PostState extends State<Digital_Marketing_Post> {
 
 
 
-                ),),],),
+                ],),
             ),)
     ,
     )
